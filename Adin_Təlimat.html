@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎓 Onlayn Test Sistemi - Tam Təlimat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            line-height: 1.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-left: 6px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.2em;
+        }
+        
+        .step-box {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .step-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .danger {
+            background: #f8d7da;
+            border-left: 5px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e83e8c;
+        }
+        
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .feature-card h4 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .tree {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 20px 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 ONLAYN TEST SİSTEMİ</h1>
+        <h2 style="text-align: center; color: #764ba2; border: none; margin-top: 10px;">
+            Tam İstifadə Təlimatı - Admin Paneli
+        </h2>
+        
+        <div class="intro">
+            <strong>🎯 Bu təlimat sizə kömək edəcək:</strong><br><br>
+            ✅ Excel-dən sualları PostgreSQL-ə yükləmək<br>
+            ✅ Suallardan test yaratmaq<br>
+            ✅ Testləri bölgələrə göndərmək<br>
+            ✅ Nəticələri toplamaq və təhlil etmək
+        </div>
+        
+        <!-- MÜNDƏRİCAT -->
+        <div class="info">
+            <h3>📋 MÜNDƏRİCAT</h3>
+            <ol>
+                <li><a href="#sistem-haqqinda">Sistem Haqqında</a></li>
+                <li><a href="#struktur">Layihə Strukturu</a></li>
+                <li><a href="#baslangic">Başlanğıc Quraşdırma</a></li>
+                <li><a href="#admin-panel">Admin Panel İstifadəsi</a></li>
+                <li><a href="#test-yaratma">Test Yaratma</a></li>
+                <li><a href="#deployment">Bölgələrə Göndərmə</a></li>
+                <li><a href="#neticeler">Nəticələrin Toplanması</a></li>
+            </ol>
+        </div>
+        
+        <!-- SİSTEM HAQQINDA -->
+        <h2 id="sistem-haqqinda">1️⃣ SİSTEM HAQQINDA</h2>
+        
+        <div class="success">
+            <h3>🎯 Sistem Məqsədi</h3>
+            <p>
+                Bu sistem 22 lisey və gimnaziyada eyni vaxtda onlayn testlər keçirmək, 
+                nəticələri avtomatik toplamaq və təhlil etmək üçün hazırlanıb.
+            </p>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>📊 Admin Panel</h4>
+                <p>Excel-dən sual yükləmə, test yaratma, statistika</p>
+            </div>
+            <div class="feature-card">
+                <h4>🎓 Şagird Tətbiqi</h4>
+                <p>Oflayn test keçirmə, avtomatik nəticə göndərmə</p>
+            </div>
+            <div class="feature-card">
+                <h4>💾 İki Baza</h4>
+                <p>PostgreSQL (mərkəzi) + SQLite (lokal)</p>
+            </div>
+            <div class="feature-card">
+                <h4>📤 Avtomatik Göndərmə</h4>
+                <p>Test bitəndə avtomatik: PostgreSQL + Excel + Email</p>
+            </div>
+        </div>
+        
+        <!-- STRUKTUR -->
+        <h2 id="struktur">2️⃣ LAİHƏ STRUKTURU</h2>
+        
+        <div class="tree">
+onlayn_test_sistemi/
+├── 📁 data/
+│   ├── questions/
+│   │   └── questions_database_full.xlsx    ← Suallar bazası
+│   ├── results/                            ← Nəticələr
+│   └── tests/                              ← Yaradılmış testlər (.rds)
+│
+├── 📁 database/
+│   ├── postgresql/
+│   │   └── schema.sql                      ← PostgreSQL strukturu
+│   └── sqlite/
+│       └── test_results_local.db           ← Lokal baza şablonu
+│
+├── 📁 shiny_apps/
+│   ├── admin_panel/
+│   │   └── app.R                           ← 🔧 ADMİN PROQRAMI
+│   └── test_app/
+│       └── app.R                           ← 🎓 ŞAGİRD PROQRAMI
+│
+└── 📁 deployment/
+    └── bolge_paketi/                       ← Bölgələr üçün ZIP
+        </div>
+        
+        <!-- BAŞLANĞIC -->
+        <h2 id="baslangic">3️⃣ BAŞLANĞIC QURAŞDIRMA</h2>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>PostgreSQL Quraşdırma</h3>
+            <p><strong>Mac üçün (Homebrew ilə):</strong></p>
+            <pre>brew install postgresql@16
+brew services start postgresql@16</pre>
+            
+            <p><strong>Baza və istifadəçi yaratma:</strong></p>
+            <pre>psql postgres
+
+CREATE DATABASE onlayn_test_db;
+CREATE USER test_admin WITH PASSWORD 'test12345';
+GRANT ALL PRIVILEGES ON DATABASE onlayn_test_db TO test_admin;
+\q</pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">2</span>Cədvəlləri Yaratma</h3>
+            <pre>psql -U test_admin -d onlayn_test_db -h localhost
+
+-- Suallar cədvəli
+CREATE TABLE questions (
+  question_id SERIAL PRIMARY KEY,
+  sual_id TEXT UNIQUE NOT NULL,
+  fenn TEXT NOT NULL,
+  mezmun_sahesi TEXT NOT NULL,
+  sual_metni TEXT NOT NULL,
+  variant_a TEXT NOT NULL,
+  variant_b TEXT NOT NULL,
+  variant_c TEXT NOT NULL,
+  variant_d TEXT NOT NULL,
+  variant_e TEXT NOT NULL,
+  dogru_cavab TEXT NOT NULL,
+  cetinlik REAL,
+  ayirdetme REAL,
+  texminetme REAL,
+  fisher_info REAL,
+  sekil_var BOOLEAN DEFAULT FALSE,
+  sekil_yolu TEXT,
+  muellif TEXT,
+  qeydler TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Testlər cədvəli
+CREATE TABLE tests (
+  test_id SERIAL PRIMARY KEY,
+  test_adi TEXT NOT NULL,
+  test_kodu TEXT UNIQUE NOT NULL,
+  test_tarixi DATE NOT NULL,
+  test_muddeti INTEGER NOT NULL,
+  umumi_sual_sayi INTEGER NOT NULL,
+  riyaziyyat_sayi INTEGER DEFAULT 0,
+  azerbaycan_sayi INTEGER DEFAULT 0,
+  ingilis_sayi INTEGER DEFAULT 0,
+  status TEXT DEFAULT 'hazırlanır',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Test sualları cədvəli
+CREATE TABLE test_questions (
+  id SERIAL PRIMARY KEY,
+  test_id INTEGER REFERENCES tests(test_id) ON DELETE CASCADE,
+  question_id INTEGER REFERENCES questions(question_id),
+  sira_nomresi INTEGER NOT NULL
+);
+
+-- Nəticələr cədvəli
+CREATE TABLE test_results (
+  id SERIAL PRIMARY KEY,
+  user_id TEXT,
+  test_session TEXT,
+  school TEXT,
+  grade TEXT,
+  teacher TEXT,
+  question_id INTEGER,
+  question_text TEXT,
+  subject TEXT,
+  content_area TEXT,
+  selected_answer TEXT,
+  correct_answer TEXT,
+  is_correct INTEGER,
+  points INTEGER,
+  difficulty REAL,
+  a_param REAL,
+  b_param REAL,
+  c_param REAL,
+  fisher_info REAL,
+  exam_time_baku TEXT,
+  timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  synced_to_server INTEGER DEFAULT 0
+);
+
+\q</pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">3</span>R və RStudio Quraşdırma</h3>
+            <ol>
+                <li>R yükləyin: <a href="https://cran.r-project.org" target="_blank">https://cran.r-project.org</a></li>
+                <li>RStudio yükləyin: <a href="https://posit.co/download/rstudio-desktop/" target="_blank">https://posit.co/download/rstudio-desktop/</a></li>
+                <li>R paketlərini quraşdırın:</li>
+            </ol>
+            <pre>install.packages(c(
+  "shiny", "shinydashboard", "shinyjs",
+  "DBI", "RSQLite", "RPostgres",
+  "dplyr", "tidyr", "ggplot2",
+  "DT", "stringr", "readxl", "openxlsx"
+))</pre>
+        </div>
+        
+        <!-- ADMİN PANEL -->
+        <h2 id="admin-panel">4️⃣ ADMİN PANEL İSTİFADƏSİ</h2>
+        
+        <div class="warning">
+            <strong>⚠️ DİQQƏT:</strong> Admin paneli yalnız mərkəzi kompüterdə işləyir. 
+            Bu kompüterdə PostgreSQL quraşdırılmış olmalıdır.
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>Admin Paneli Açma</h3>
+            <pre>cd ~/Desktop/onlayn_test_sistemi/shiny_apps/admin_panel
+open -a RStudio app.R
+
+# RStudio-da "Run App" düyməsinə basın</pre>
+        </div>
+        
+        <h3>📊 Admin Panel Tabları</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tab</th>
+                    <th>Funksiya</th>
+                    <th>İstifadə</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>📊 Statistika</strong></td>
+                    <td>Ümumi məlumatlar</td>
+                    <td>Cəmi sual sayı, fənn paylanması, çətinlik statistikası</td>
+                </tr>
+                <tr>
+                    <td><strong>📥 Excel-dən Yüklə</strong></td>
+                    <td>Sual yükləmə</td>
+                    <td>Excel faylından sualları PostgreSQL-ə yükləmək</td>
+                </tr>
+                <tr>
+                    <td><strong>✏️ Sual Seçimi</strong></td>
+                    <td>Test yaratma</td>
+                    <td>Sualları seçib .rds test faylı yaratmaq</td>
+                </tr>
+                <tr>
+                    <td><strong>📋 Mövcud Testlər</strong></td>
+                    <td>Test idarəsi</td>
+                    <td>Yaradılmış testləri görmək və silmək</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- EXCEL YÜKLƏMƏ -->
+        <h2 id="test-yaratma">5️⃣ TEST YARATMA PROSESI</h2>
+        
+        <div class="info">
+            <h3>📥 ADDIM 1: EXCEL-DƏN SUAL YÜKLƏMƏ</h3>
+        </div>
+        
+        <div class="step-box">
+            <h3>Excel Faylının Formatı</h3>
+            <p>Excel faylında bu sütunlar olmalıdır:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sütun Adı</th>
+                        <th>Tip</th>
+                        <th>Məcburi</th>
+                        <th>Nümunə</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>sual_id</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>MAT_001</td>
+                    </tr>
+                    <tr>
+                        <td>fenn</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>Riyaziyyat</td>
+                    </tr>
+                    <tr>
+                        <td>mezmun_sahesi</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>Ədədlər və əməllər</td>
+                    </tr>
+                    <tr>
+                        <td>sual_metni</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>15 + 23 = ?</td>
+                    </tr>
+                    <tr>
+                        <td>variant_A</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>36</td>
+                    </tr>
+                    <tr>
+                        <td>variant_B</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>37</td>
+                    </tr>
+                    <tr>
+                        <td>variant_C</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <td>variant_D</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <td>variant_E</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <td>dogru_cavab</td>
+                        <td>Text</td>
+                        <td>✅</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>cetinlik</td>
+                        <td>Rəqəm</td>
+                        <td>✅</td>
+                        <td>-2.31</td>
+                    </tr>
+                    <tr>
+                        <td>ayirdetme</td>
+                        <td>Rəqəm</td>
+                        <td>✅</td>
+                        <td>1.79</td>
+                    </tr>
+                    <tr>
+                        <td>texminetme</td>
+                        <td>Rəqəm</td>
+                        <td>✅</td>
+                        <td>0.18</td>
+                    </tr>
+                    <tr>
+                        <td>fisher_info</td>
+                        <td>Rəqəm</td>
+                        <td>✅</td>
+                        <td>0.80</td>
+                    </tr>
+                    <tr>
+                        <td>sekil_var</td>
+                        <td>Boolean</td>
+                        <td>❌</td>
+                        <td>FALSE</td>
+                    </tr>
+                    <tr>
+                        <td>sekil_yolu</td>
+                        <td>Text</td>
+                        <td>❌</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>muellif</td>
+                        <td>Text</td>
+                        <td>❌</td>
+                        <td>Riyaziyyat Müəllimi</td>
+                    </tr>
+                    <tr>
+                        <td>qeydler</td>
+                        <td>Text</td>
+                        <td>❌</td>
+                        <td>Asan sual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>Excel Faylını Admin Panelə Yükləmə</h3>
+            <ol>
+                <li>Admin Paneldə <strong>"📥 Excel-dən Yüklə"</strong> tabına keçin</li>
+                <li><strong>"📂 Fayl Seç"</strong> düyməsinə basıb Excel faylını seçin</li>
+                <li>Fayl yüklənəcək və <strong>PREVIEW</strong>-də görünəcək</li>
+                <li>İstəsəniz <strong>filterlər</strong> tətbiq edin:
+                    <ul>
+                        <li>Fənn (Riyaziyyat, Azərbaycan dili, İngilis dili)</li>
+                        <li>Məzmun sahəsi</li>
+                        <li>Çətinlik (Asan, Orta, Çətin)</li>
+                    </ul>
+                </li>
+                <li><strong>Yükləmə rejimi</strong> seçin:
+                    <ul>
+                        <li><strong>APPEND</strong> - Mövcud suallara əlavə et</li>
+                        <li><strong>REPLACE</strong> - Hamısını sil və yenilərini yaz</li>
+                    </ul>
+                </li>
+                <li><strong>"📤 POSTGRESQL-Ə YÜKLƏ"</strong> düyməsinə basın</li>
+                <li>Təsdiqləyin</li>
+            </ol>
+        </div>
+        
+        <div class="danger">
+            <strong>⚠️ DİQQƏT:</strong> REPLACE rejimi bazadakı BÜTÜN sualları siləcək!
+        </div>
+        
+        <div class="info">
+            <h3>✏️ ADDIM 2: TEST YARATMA</h3>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>Sualları Seçmə</h3>
+            <ol>
+                <li><strong>"✏️ Sual Seçimi (Manual)"</strong> tabına keçin</li>
+                <li><strong>ADDIM 1</strong>: Fənn seçin (Riyaziyyat, Azərbaycan dili və s.)</li>
+                <li>İstəsəniz məzmun sahəsi və çətinlik filterləri tətbiq edin</li>
+                <li>Cədvəldə suallar görünəcək</li>
+                <li><strong>ADDIM 2</strong>: Sual ID-lərini <code>question_id</code> sütunundan götürüb yazın</li>
+                <li>Məsələn: <code>1, 5, 10, 15, 20</code></li>
+                <li><strong>"➕ ƏLAVƏ ET"</strong> düyməsinə basın</li>
+            </ol>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">2</span>Test Məlumatlarını Doldurmaq</h3>
+            <p><strong>ADDIM 3</strong>-də test məlumatlarını daxil edin:</p>
+            <ul>
+                <li><strong>📝 Test Adı:</strong> Məsələn "Fevral 2025 Buraxılış Testi"</li>
+                <li><strong>🔢 Test Kodu:</strong> Məsələn "TEST_FEB_2025"</li>
+                <li><strong>📅 Test Tarixi:</strong> Test keçiriləcək tarix</li>
+                <li><strong>⏱️ Müddət:</strong> Dəqiqələrlə (default: 90)</li>
+            </ul>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">3</span>Test Yaratmaq</h3>
+            <ol>
+                <li>Seçilmiş sualları yoxlayın</li>
+                <li>Lazımsız sual varsa cədvəldə seçib <strong>"❌ SİL"</strong> basın</li>
+                <li><strong>"📤 TEST YARAT (.RDS)"</strong> düyməsinə basın</li>
+                <li>Test avtomatik yaradılacaq:
+                    <ul>
+                        <li>✅ <code>data/tests/TEST_FEB_2025.rds</code> faylı yaranacaq</li>
+                        <li>✅ PostgreSQL-də <code>tests</code> cədvəlinə yazılacaq</li>
+                        <li>✅ <code>available_tests.rds</code> yenilənəcək</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="success">
+            <strong>✅ Test hazırdır!</strong> İndi bölgələrə göndərmək üçün paket hazırlaya bilərsiniz.
+        </div>
+        
+        <!-- DEPLOYMENT -->
+        <h2 id="deployment">6️⃣ BÖLGƏLƏRƏ GÖNDƏRMƏ</h2>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>Deployment Paketi Yarat</h3>
+            <p>Terminal-da:</p>
+            <pre>cd ~/Desktop/onlayn_test_sistemi/deployment/bolge_paketi
+
+# ZIP yarat
+zip -r Bolge_Paketi_$(date +%Y%m%d).zip test_app/ *.txt
+
+# Ölçüsünü yoxla
+ls -lh *.zip</pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">2</span>Paketi Göndərmə Üsulları</h3>
+            
+            <h4>📧 Email ilə:</h4>
+            <ol>
+                <li>ZIP faylını email-ə əlavə edin</li>
+                <li>22 məktəb administratoruna göndərin</li>
+            </ol>
+            
+            <h4>☁️ Google Drive ilə:</h4>
+            <ol>
+                <li>ZIP faylını Google Drive-a yükləyin</li>
+                <li>Linki paylaşın</li>
+            </ol>
+            
+            <h4>💾 USB ilə:</h4>
+            <pre>cp Bolge_Paketi_*.zip /Volumes/USB_NAME/</pre>
+        </div>
+        
+        <div class="warning">
+            <h3>📋 Bölgələrə Göndəriləcək Məlumatlar</h3>
+            <ol>
+                <li>✅ ZIP paketi</li>
+                <li>✅ <strong>Server IP ünvanı</strong> (məsələn: 192.168.1.69)</li>
+                <li>✅ Quraşdırma təlimatları (ZIP içində)</li>
+                <li>✅ Admin email ünvanı (ixtiyari)</li>
+            </ol>
+        </div>
+        
+        <!-- NƏTİCƏLƏR -->
+        <h2 id="neticeler">7️⃣ NƏTİCƏLƏRİN TOPLANMASI</h2>
+        
+        <div class="info">
+            <h3>📤 Avtomatik Göndərilmə Prosesi</h3>
+            <p>Şagird testi bitirdikdə <strong>avtomatik</strong> olaraq:</p>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h4>1️⃣ SQLite</h4>
+                <p>Nəticələr lokal bazaya yazılır</p>
+            </div>
+            <div class="feature-card">
+                <h4>2️⃣ PostgreSQL</h4>
+                <p>Serverə göndərilməyə cəhd edilir</p>
+            </div>
+            <div class="feature-card">
+                <h4>3️⃣ Excel</h4>
+                <p>Desktop-da Excel faylı yaranır</p>
+            </div>
+            <div class="feature-card">
+                <h4>4️⃣ Status</h4>
+                <p>Ekranda göndərilmə statusu göstərilir</p>
+            </div>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">1</span>PostgreSQL-dən Nəticələri Yoxlamaq</h3>
+            <pre>psql -U test_admin -d onlayn_test_db -h localhost
+
+-- Ümumi statistika
+SELECT 
+  COUNT(*) as toplam_netice,
+  COUNT(DISTINCT school) as mekteb_sayi,
+  COUNT(DISTINCT test_session) as imtahan_sayi
+FROM test_results;
+
+-- Məktəblərə görə
+SELECT 
+  school,
+  COUNT(*) as netice_sayi,
+  SUM(is_correct) as dogru_cavab,
+  ROUND(AVG(is_correct::numeric) * 100, 1) as orta_faiz
+FROM test_results
+GROUP BY school
+ORDER BY orta_faiz DESC;
+
+\q</pre>
+        </div>
+        
+        <div class="step-box">
+            <h3><span class="step-number">2</span>Excel Fayllarını Toplamaq</h3>
+            <p>Hər məktəbdə <code>~/Desktop/Test_Neticeler/</code> qovluğunda Excel faylları yaranıb.</p>
+            <p>Bu faylları toplayıb təhlil edə bilərsiniz:</p>
+            <ul>
+                <li>Email ilə göndərilmişsə: inbox-dan yığın</li>
+                <li>USB ilə: USB-də topluyun</li>
+                <li>PostgreSQL-də varsa: ordan export edin</li>
+            </ul>
+        </div>
+        
+        <!-- PROBLEMLƏR -->
+        <h2>🆘 TƏMİZ PROBLEMLƏR VƏ HƏLLƏRİ</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Problem</th>
+                    <th>Səbəb</th>
+                    <th>Həll</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PostgreSQL bağlantı xətası</td>
+                    <td>PostgreSQL işləmir</td>
+                    <td><code>brew services start postgresql@16</code></td>
+                </tr>
+                <tr>
+                    <td>Test tapılmır</td>
+                    <td>data/tests qovluğunda yoxdur</td>
+                    <td>Admin paneldə test yaradın</td>
+                </tr>
+                <tr>
+                    <td>Excel yüklənmir</td>
+                    <td>Format səhvdir</td>
+                    <td>Sütun adlarını yoxlayın</td>
+                </tr>
+                <tr>
+                    <td>Nəticələr gəlmir</td>
+                    <td>Şəbəkə problemi</td>
+                    <td>Server IP-ni yoxlayın, Excel faylları Desktop-dadır</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- YEKUN -->
+        <div class="success" style="margin-top: 50px; padding: 30px;">
+            <h2 style="text-align: center; color: #28a745; border: none; margin: 0;">
+                ✅ TƏBRİKLƏR!
+            </h2>
+            <p style="text-align: center; margin-top: 15px; font-size: 1.2em;">
+                İndi siz test sistemini tam idarə edə bilərsiniz!
+            </p>
+            <p style="text-align: center; margin-top: 10px;">
+                Suallar? Problemler? Sistem administratoru ilə əlaqə saxlayın.
+            </p>
+        </div>
+        
+        <div style="text-align: center; color: #999; margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee;">
+            <p>Onlayn Test Sistemi v1.0 | © 2025 | Azerbaijan Education Institute</p>
+            <p style="font-size: 0.9em;">Yaradılıb: Claude.ai köməyilə</p>
+        </div>
+    </div>
+</body>
+</html>

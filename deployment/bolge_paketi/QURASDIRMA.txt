@@ -1,0 +1,75 @@
+╔══════════════════════════════════════════════════════════════╗
+║               QURAŞDIRMA TƏLİMATI                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+🖥️ SİSTEM TƏLƏBLƏRİ:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Windows 10/11 və ya Mac OS
+✅ Minimum 4GB RAM
+✅ Lokal şəbəkə bağlantısı (30 kompüter)
+✅ Server IP ünvanı (mərkəzi kompüterin IP-si)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ADDIM 1: R QURAŞDIRIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Windows:
+  1. https://cran.r-project.org/bin/windows/base/
+  2. "Download R-4.x.x for Windows" yükləyin
+  3. Quraşdırın
+
+Mac:
+  1. https://cran.r-project.org/bin/macosx/
+  2. "R-4.x.x.pkg" yükləyin
+  3. Quraşdırın
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ADDIM 2: RStudio QURAŞDIRIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. https://posit.co/download/rstudio-desktop/
+2. "Download RStudio Desktop" (pulsuz)
+3. Quraşdırın
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ADDIM 3: R PAKETLƏRINI QURAŞDIRIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RStudio açın və Console-da (aşağıda) yazın:
+
+install.packages(c(
+  "shiny",
+  "shinydashboard",
+  "shinyjs",
+  "DBI",
+  "RSQLite",
+  "RPostgres",
+  "dplyr",
+  "tidyr",
+  "ggplot2",
+  "openxlsx"
+))
+
+ENTER basın və gözləyin (5-10 dəqiqə)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ADDIM 4: SERVER IP ÜNVANINI ÖYRƏNIN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Mərkəzi server kompüterinin IP ünvanını administrator verəcək.
+Məsələn: 192.168.1.69
+
+Bu rəqəmi yazıb saxlayın!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ QURAŞDIRMA TAMAMLANDI!
+
+İndi ISTIFADE.txt faylına keçin.
+
+╚══════════════════════════════════════════════════════════════╝
